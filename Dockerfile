@@ -7,6 +7,10 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory inside the container
 WORKDIR /code
 
+RUN apt-get update \
+    && apt-get install -y build-essential default-libmysqlclient-dev pkg-config \
+    && rm -rf /var/lib/apt/lists/* \
+    
 # Copy and install dependencies
 COPY requirements.txt /code/
 RUN pip install --upgrade pip && pip install -r requirements.txt
