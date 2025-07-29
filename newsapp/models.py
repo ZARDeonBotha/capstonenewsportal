@@ -245,7 +245,8 @@ class Newsletter(models.Model):
     :type title: models.CharField
     :ivar content: The main body/content of the newsletter.
     :type content: models.TextField
-    :ivar journalist: The author of the newsletter. Links to the user model.
+    :ivar journalist: The author of the newsletter.
+        Links to the user model.
     :type journalist: models.ForeignKey
     :ivar publisher: The publisher of the newsletter.
         Links to a Publisher model.
@@ -272,4 +273,14 @@ class Newsletter(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        """
+        Represents the string representation of an object.
+
+        This method is intended to give a meaningful and human-readable
+        string representation of the object when str() or print() is called
+        on it.
+
+        :return: The title of the object as a string
+        :rtype: str
+        """
         return self.title
