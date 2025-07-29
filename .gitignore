@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 *$py.class
 
 # Django migrations
@@ -20,6 +22,8 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
+.AppleDouble
+.LSOverride
 
 # Database & media
 *.sqlite3
@@ -27,6 +31,9 @@ db.sqlite3
 media/
 staticfiles/
 local_settings.py
+*.bak
+*.swp
+*~
 
 # Environment variables/secrets
 .env
@@ -41,6 +48,12 @@ build/
 # Log files
 *.log
 
+# Sphinx documentation builds
+# (Intentionally NOT ignoring docs/_build/ so built HTML is included for assignment)
+# docs/_build/
+
 # Test & coverage
 htmlcov/
 .coverage
+.pytest_cache/
+.mypy_cache/
