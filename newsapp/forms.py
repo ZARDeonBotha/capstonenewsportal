@@ -22,6 +22,21 @@ class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     class Meta:
+        """
+        Represents a custom user model form for handling user
+        registration or updates.
+
+        This class is used to facilitate interaction and validation of
+        user-provided data, such as username, email, role, and passwords,
+        in the context of forms. It allows for the customization and
+        restriction of fields for user management in a Django application.
+
+        :ivar model: The associated model to be used with the form.
+        :type model: CustomUser
+        :ivar fields: Fields included in the form for validation
+            and submission.
+        :type fields: tuple
+        """
         model = CustomUser
         fields = ('username', 'email', 'role', 'password1', 'password2')
 
