@@ -73,7 +73,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME', 'newsappdb'),
         'USER': os.environ.get('DB_USER', 'admin'),
         'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),        # For Docker: use 'host.docker.internal' or service name
+        'HOST': os.environ.get('DB_HOST', 'db'),        # For Docker: use 'host.docker.internal' or service name
         'PORT': os.environ.get('DB_PORT', '3306'),
     }
 }
